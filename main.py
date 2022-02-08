@@ -33,7 +33,7 @@ client = LocalClient(reigon="ap")
 
 def gett():
     data = client.s.get(client._url(
-        "/chat/v5/messages"), verify=ssl.CERT_NONE)
+        "/chat/v6/messages"), verify=ssl.CERT_NONE)
     data = json.loads(data.content)['messages']
     listofmessages = []
     for i in data:
